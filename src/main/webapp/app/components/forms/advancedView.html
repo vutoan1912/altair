@@ -1,0 +1,424 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <h3 class="heading_a">Character Counter</h3>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-3">
+                        <label>Default</label>
+                        <input type="text" class="input-count md-input" id="input_counter" maxlength="60" md-input char-counter ng-model="forms_advanced.input_default" />
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                        <label>Error</label>
+                        <input type="text" class="md-input md-input-danger input-count" maxlength="40" md-input char-counter ng-model="forms_advanced.input_error" />
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                        <label>Success</label>
+                        <input type="text" class="md-input md-input-success input-count" maxlength="40" md-input char-counter ng-model="forms_advanced.input_ok" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <h3 class="heading_a">Sliders</h3>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-3">
+                        <div id="ionslider_1" name="ionslider_1" ion-slider ng-model="forms_advanced.ionslider_1" min="0" max="100"></div>
+                        <span class="uk-form-help-block">Basic</span>
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                        <div id="ionslider_2" name="ionslider_2" ion-slider ng-model="forms_advanced.ionslider_2" min="0" max="1000" type="double" grid="true" prefix="$"></div>
+                        <span class="uk-form-help-block">Double</span>
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                        <div id="ionslider_3" name="ionslider_3" ion-slider ng-model="forms_advanced.ionslider_3" min="0" max="100" grid="true" ng-disabled="true"></div>
+                        <span class="uk-form-help-block">Disabled</span>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <div id="ionslider_4" name="ionslider_4" ion-slider ng-model="forms_advanced.ionslider_4" min="0" max="100" type="double" grid-num="10" from-min="10" from-max="30" from-shadow="true" to-min="70" to-max="90" to-shadow="true" grid="true"></div>
+                        <span class="uk-form-help-block">Movement limit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <h3 class="heading_a">Advanced Selects</h3>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-large-1-2">
+                        <selectize id="selec_adv_1" config="selectize_planets_config" options="selectize_planets_options" position="bottom" ng-model="selectize_planets_edit"></selectize>
+                    </div>
+                    <div class="uk-width-large-1-2">
+                        <selectize id="selec_adv_2" config="selectize_emails_config" options="selectize_emails_options" position="bottom" ng-model="forms_advanced.selectize_emails"></selectize>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid" data-uk-grid-margin>
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <h3 class="heading_a">Datepicker</h3>
+                        <div class="uk-grid">
+                            <div class="uk-width-large-1-2 uk-width-medium-1-1">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                    <label for="uk_dp_1">Select date</label>
+                                    <input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}" md-input ng-model="forms_advanced.datepicker">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <h3 class="heading_a">Timepicker</h3>
+                        <div class="uk-grid">
+                            <div class="uk-width-large-1-2 uk-width-medium-1-1">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-clock-o"></i></span>
+                                    <label for="uk_tp_1">Select time</label>
+                                    <input class="md-input" type="text" id="uk_tp_1" data-uk-timepicker md-input ng-model="forms_advanced.timepicker">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid">
+            <div class="uk-width-1-1">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <h3 class="heading_a">Date range</h3>
+                        <div class="uk-grid" data-uk-grid-margin>
+                            <div class="uk-width-large-1-2 uk-width-medium-1-1">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                    <label for="uk_dp_start">Start Date</label>
+                                    <input class="md-input" type="text" id="uk_dp_start" md-input ng-model="forms_advanced.dp_start">
+                                </div>
+                            </div>
+                            <div class="uk-width-large-1-2 uk-width-medium-1-1">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                    <label for="uk_dp_end">End Date</label>
+                                    <input class="md-input" type="text" id="uk_dp_end" md-input ng-model="forms_advanced.dp_end">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid" data-uk-grid-match="{target:'.md-card'}" data-uk-grid-margin>
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <h3 class="heading_a">Password</h3>
+                        <input type="password" class="md-input" value="password" md-input />
+                        <a href="" class="uk-form-password-toggle" data-uk-form-password>show</a>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <h3 class="heading_a uk-margin-bottom">Form file</h3>
+                        <div class="uk-form-file md-btn md-btn-primary">
+                            Select
+                            <input id="form-file" type="file">
+                        </div>
+                        You can also use
+                        <div class="uk-form-file uk-text-primary">text<input id="form-file-text" type="file"></div>.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <h3 class="heading_a">Progressbars</h3>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <div class="uk-progress">
+                            <div class="uk-progress-bar" style="width: 40%;">40%</div>
+                        </div>
+                        <div class="uk-progress uk-progress-small">
+                            <div class="uk-progress-bar" style="width: 20%;"></div>
+                        </div>
+                        <div class="uk-progress uk-progress-mini">
+                            <div class="uk-progress-bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="uk-progress uk-progress-success uk-progress-small">
+                            <div class="uk-progress-bar" style="width: 20%;"></div>
+                        </div>
+                        <div class="uk-progress uk-progress-warning uk-progress-small">
+                            <div class="uk-progress-bar" style="width: 40%;"></div>
+                        </div>
+                        <div class="uk-progress uk-progress-danger uk-progress-small">
+                            <div class="uk-progress-bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <div class="uk-progress uk-progress-striped uk-active uk-progress-small">
+                            <div class="uk-progress-bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="uk-progress uk-progress-success uk-progress-striped uk-active uk-progress-mini">
+                            <div class="uk-progress-bar" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <h3 class="heading_a">Masked inputs</h3>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-4">
+                        <label for="masked_date">Date</label>
+                        <input class="md-input masked_input" id="masked_date" type="text" data-inputmask="'alias': 'mm/dd/yyyy'" data-inputmask-showmaskonhover="false" md-input />
+                    </div>
+                    <div class="uk-width-medium-1-4">
+                        <label for="masked_phone">Phone</label>
+                        <input class="md-input masked_input" id="masked_phone" type="text" data-inputmask="'mask': '999 - 999 999 999'" data-inputmask-showmaskonhover="false" md-input />
+                    </div>
+                    <div class="uk-width-medium-1-4">
+                        <label for="masked_currency">Currency</label>
+                        <input class="md-input masked_input" id="masked_currency" type="text" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 2, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '0'" data-inputmask-showmaskonhover="false" md-input />
+                    </div>
+                    <div class="uk-width-medium-1-4">
+                        <label for="masked_email">Email</label>
+                        <input class="md-input masked_input" id="masked_email" type="text" data-inputmask="'alias': 'email'" data-inputmask-showmaskonhover="false" md-input />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--datetime range-->
+        <div class="md-card">
+            <div class="md-card-content">
+                <input id="filter_datetime_column" class="filter-table-cell ng-pristine ng-valid ng-empty ng-touched"
+                       ng-model="DatetimeRange.ngModel" type="search" placeholder=" Select datetime..."
+                       style="height: 38px;width: 200px;"
+                       ng-click="openModalDateTimeRange()">
+            </div>
+        </div>
+
+        <div class="uk-modal uk-open" id="modal_datetimerange" aria-hidden="false" style="display: block; overflow-y: scroll;" ng-show="DatetimeRange.EnableShow">
+            <div class="uk-modal-dialog" style="top: 22.5px;">
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 36px;">
+                            <input type="radio" name="radio_demo" id="radio_datetime_range" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Range</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <label for="uk_dp_start">Start Date</label><br>
+                            <div style="padding-top: 7px;">
+                                <input kendo-date-time-picker ng-model="DatetimeRange.ngModelStart" k-ng-model="DatetimeRange.kNgModelStart" style="width: 100%;" id="kUI_datetimepicker_start"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <label for="uk_dp_end">End Date</label><br>
+                            <div style="padding-top: 7px;">
+                                <input kendo-date-time-picker ng-model="DatetimeRange.ngModelEnd" k-ng-model="DatetimeRange.kNgModelEnd" style="width: 100%;" id="kUI_datetimepicker_end"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 9px;">
+                            <input type="radio" name="radio_demo" id="radio_datetime_equal" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Equal</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <!--<label for="uk_dp_start">Start Date</label><br>-->
+                            <input kendo-date-time-picker ng-model="DatetimeRange.ngModelStart" k-ng-model="DatetimeRange.kNgModelStart" style="width: 100%;" id="kUI_datetimepicker"/>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;">
+                            <input type="radio" name="radio_demo" id="radio_datetime_empty" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Is Empty</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;"></div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-modal-footer uk-text-right" style="width: 560px;margin-top: -10px;">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="cancelModalDateTimeRange()">Cancel</button>
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="clearModalDateTimeRange()">Clear</button>
+                    <button type="button" id="datertimeangeApply" class="md-btn md-btn-flat md-btn-flat-primary" ng-click="selectDateTimeRange()">Select range</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--number range-->
+        <div class="md-card">
+            <div class="md-card-content">
+                <input id="filter_number" class="filter-table-cell ng-pristine ng-valid ng-empty ng-touched"
+                       ng-model="NumberRange.ngModel" type="search" placeholder=" Select number..."
+                       style="height: 38px;width: 200px;"
+                       ng-click="openModalNumberRange()">
+            </div>
+        </div>
+
+        <div class="uk-modal uk-open" id="modal_number_range" aria-hidden="false" style="display: block; overflow-y: scroll;" ng-show="NumberRange.EnableShow">
+            <div class="uk-modal-dialog" style="top: 22.5px;">
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 21px;">
+                            <input type="radio" name="radio_demo" id="radio_number_range" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Range</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <div style="padding-top: 7px;">
+                                <!--<input kendo-date-time-picker ng-model="NumberRange.ngModelStart" k-ng-model="NumberRange.kNgModelStart" style="width: 100%;" id="kUI_Numberpicker_start"/>-->
+                                <input type="number" step="0.01" class="md-input" md-input />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <div style="padding-top: 7px;">
+                                <!--<input kendo-date-time-picker ng-model="NumberRange.ngModelEnd" k-ng-model="NumberRange.kNgModelEnd" style="width: 100%;" id="kUI_Numberpicker_end"/>-->
+                                <input type="number" step="0.01" class="md-input" md-input />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 14px;">
+                            <input type="radio" name="radio_demo" id="radio_number_equal" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Equal</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 120%;">
+                            <!--<input kendo-date-time-picker ng-model="NumberRange.ngModelStart" k-ng-model="NumberRange.kNgModelStart" style="width: 100%;" id="kUI_Numberpicker"/>-->
+                            <input type="number" step="0.01" class="md-input" md-input />
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;">
+                            <input type="radio" name="radio_demo" id="radio_number_empty" icheck ng-model="radio_demo" value="radio_1" />
+                            <label class="inline-label">Is Empty</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;"></div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-modal-footer uk-text-right" style="width: 560px;margin-top: -10px;">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="cancelModalNumberRange()">Cancel</button>
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="clearModalNumberRange()">Clear</button>
+                    <button type="button" id="numberApply" class="md-btn md-btn-flat md-btn-flat-primary" ng-click="selectNumberRange()">Select range</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--date range-->
+        <div class="md-card">
+            <div class="md-card-content">
+                <input id="filter_date_column" class="filter-table-cell ng-pristine ng-valid ng-empty ng-touched"
+                       ng-model="DateRange.inputValue" type="search" placeholder=" Select date..."
+                       style="height: 38px;width: 200px;"
+                       ng-click="openModalDateRange()">
+            </div>
+        </div>
+
+        <div class="uk-modal uk-open" id="modal_date_range" aria-hidden="false" style="display: block; overflow-y: scroll;" ng-show="DateRange.EnableShow">
+            <div class="uk-modal-dialog" style="top: 22.5px;">
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 10px;">
+                            <input type="radio" name="radio_demo" id="radio_range" icheck ng-model="radio_model" value="radio_1" />
+                            <label class="inline-label">Range</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 110%;">
+                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                            <input class="md-input" type="text" id="uk_date_start">
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;">
+                        <div class="uk-input-group" style="width: 110%;">
+                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                            <input class="md-input" type="text" id="uk_date_end">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;margin-top: 13px;">
+                            <input type="radio" name="radio_demo" id="radio_equal" icheck ng-model="radio_model" value="radio_2" />
+                            <label class="inline-label">Equal</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;">
+                        <div class="uk-input-group" style="width: 110%;">
+                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                            <input class="md-input" type="text" id="uk_date_equal" md-input>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin style="margin-left: -11px;">
+                    <div class="uk-width-large-1-5">
+                        <p style="margin-left: -30px;">
+                            <input type="radio" name="radio_demo" id="radio_empty" icheck ng-model="radio_model" value="radio_3" />
+                            <label class="inline-label">Is Empty</label>
+                        </p>
+                    </div>
+                    <div class="uk-width-large-2-5" style="margin-left: -54px;"></div>
+                    <div class="uk-width-large-2-5" style="margin-left: 18px;"></div>
+                </div>
+                <div class="uk-modal-footer uk-text-right" style="width: 560px;margin-top: -10px;">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="cancelModalDateRange()">Cancel</button>
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close" ng-click="clearModalDateRange()">Clear</button>
+                    <button type="button" id="dateRangeApply" class="md-btn md-btn-flat md-btn-flat-primary" ng-click="selectDateRange()">Select range</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
